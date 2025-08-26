@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cctype>
+
+using namespace std;
+
+int main(){
+    string a, b;
+
+    cin >> a >> b;
+
+    int i = 0;
+    while(i < a.size()){
+        if(tolower(a[i]) < tolower(b[i])){
+            cout << "-1";
+            return 0;
+        }else if(tolower(a[i]) > tolower(b[i])){
+            cout << "1";
+            return 0;
+        }
+        i++;
+    }
+
+    cout << "0";
+
+    return 0;
+}
